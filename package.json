@@ -25,6 +25,8 @@
     "@nestjs/schedule": "^6.0.0",
     "axios": "^1.11.0",
     "cross-env": "^10.0.0",
+    "google-auth-library": "^10.2.1",
+    "googleapis": "^157.0.0",
     "logger": "^0.0.1",
     "nestjs-schedule": "^0.1.8",
     "pg": "^8.16.3",

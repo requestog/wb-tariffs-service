@@ -4,15 +4,19 @@ import axios from 'axios';
 import * as process from 'node:process';
 import { Logger } from '@nestjs/common';
 import { TariffsRepository } from './tariffs.repository';
+import { GoogleSheetsService } from '../google-sheets/google-sheets.service';
 
 @Injectable()
 export class TariffsService {
   private readonly logger = new Logger(TariffsService.name);
-  constructor(private readonly repository: TariffsRepository) {}
+
+  constructor(
+    private readonly repository: TariffsRepository,
+    private readonly googleSheetsService: GoogleSheetsService,
+  ) {}
 
   async getTariffs(date: string): Promise<WarehouseTariffDto[]> {
     const url = process.env.API_URL;
-    this.logger.verbose(`url ${url}`);
     const response = await axios.get(`${url}?date=${date}`, {
       headers: { Authorization: `${process.env.WB_API_KEY}` },
     });

@@ -12,9 +12,10 @@ export class TariffsCron {
   @Cron(CronExpression.EVERY_MINUTE)
   async handleCron() {
     const today = new Date().toISOString().slice(0, 10);
-    this.logger.verbose(`Today is ${today}`);
+    this.logger.verbose(`Получение данных на ${today}...`);
     const tariffs: WarehouseTariffDto[] = await this.tariffsService.getTariffs(today);
     await this.tariffsService.saveTariffs(today, tariffs);
     this.logger.verbose(tariffs);
+    this.logger.verbose('Данные были получены и сохранены');
   }
 }

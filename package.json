@@ -6,9 +6,9 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "knex": "cross-env NODE_ENV=development knex --knexfile knexfile.ts",
-    "migrate": "cross-env NODE_ENV=development knex --knexfile knexfile.ts migrate:latest",
-    "rollback": "cross-env NODE_ENV=development knex --knexfile knexfile.ts migrate:rollback",
+    "knex": "cross-env NODE_ENV=development knex --knexfile src/modules/database/knexfile.ts",
+    "migrate": "cross-env NODE_ENV=development knex --knexfile src/modules/database/knexfile.ts migrate:latest",
+    "rollback": "cross-env NODE_ENV=development knex --knexfile src/modules/database/knexfile.ts migrate:rollback",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",

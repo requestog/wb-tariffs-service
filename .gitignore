@@ -56,3 +56,5 @@ pids
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 wb-tariffs-service-470010-abcdd295e451.json
+docker-compose.yml
+Dockerfile

@@ -1,6 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { google, sheets_v4 } from 'googleapis';
 import * as path from 'path';
+import * as process from 'node:process';
 
 @Injectable()
 export class GoogleSheetsService {
@@ -12,7 +13,7 @@ export class GoogleSheetsService {
     'wb-tariffs-service-470010-abcdd295e451.json',
   );
   private readonly SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
-  private readonly SPREADSHEET_ID = '1BYY7LJXYr2ptUfMFdPLx820g2FenZJKo3ClT7Mkuw2c';
+  private readonly SPREADSHEET_ID = process.env.SPREADSHEET_ID;
   private readonly logger = new Logger(GoogleSheetsService.name);
 
   private sheets: sheets_v4.Sheets | null = null;

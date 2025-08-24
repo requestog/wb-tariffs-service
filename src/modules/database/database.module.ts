@@ -1,19 +1,21 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import Knex from 'knex';
-import * as process from 'node:process';
 
 @Module({
+  imports: [ConfigModule.forRoot()],
   providers: [
     {
       provide: 'KnexConnection',
-      useFactory: () => {
+      inject: [ConfigService],
+      useFactory: (config: ConfigService) => {
         return Knex({
           client: 'pg',
           connection: {
-            host: 'db',
-            user: process.env.POSTGRES_USER,
-            password: process.env.POSTGRES_PASSWORD,
-            database: process.env.POSTGRES_DB,
+            host: config.get<string>('POSTGRES_HOST', 'localhost'),
+            user: config.get<string>('POSTGRES_USER'),
+            password: config.get<string>('POSTGRES_PASSWORD'),
+            database: config.get<string>('POSTGRES_DB'),
           },
         });
       },

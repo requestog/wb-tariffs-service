@@ -14,6 +14,7 @@ export class TariffsCron {
     const today = new Date().toISOString().slice(0, 10);
     this.logger.verbose(`Today is ${today}`);
     const tariffs: WarehouseTariffDto[] = await this.tariffsService.getTariffs(today);
+    await this.tariffsService.saveTariffs(today, tariffs);
     this.logger.verbose(tariffs);
   }
 }

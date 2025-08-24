@@ -42,10 +42,47 @@ export class TariffsService {
     return parseFloat(value.replace(',', '.'));
   }
 
-  async saveTariffs(date: string, tariffs: WarehouseTariffDto[]): Promise<void> {
+  async saveTariffs(date: string, tariffs): Promise<void> {
     const dateId = await this.repository.getOrCreateDate(date);
     for (const tariff of tariffs) {
       await this.repository.upsertWarehouseTariff(dateId, tariff);
     }
+
+    const sortedTariffs = [...tariffs].sort((a, b) => {
+      const aCoef = a.box_delivery_coef_expr ?? 0;
+      const bCoef = b.box_delivery_coef_expr ?? 0;
+      return aCoef - bCoef;
+    });
+
+    const dataForSheet = [
+      [
+        'Географический округ',
+        'Склад',
+        'Базовая стоимость (FBO)',
+        'Коэффициент (FBO)',
+        'Стоимость за литр (FBO)',
+        'Базовая стоимость (FBS)',
+        'Коэффициент (FBS)',
+        'Стоимость за литр (FBS)',
+        'Базовая стоимость хранения',
+        'Коэффициент хранения',
+        'Стоимость хранения за литр',
+      ],
+      ...sortedTariffs.map((tariff) => [
+        tariff.geo_name ?? '',
+        tariff.warehouse_name ?? '',
+        tariff.box_delivery_base ?? '',
+        tariff.box_delivery_coef_expr ?? '',
+        tariff.box_delivery_liter ?? '',
+        tariff.box_delivery_marketplace_base ?? '',
+        tariff.box_delivery_marketplace_coef_expr ?? '',
+        tariff.box_delivery_marketplace_liter ?? '',
+        tariff.box_storage_base ?? '',
+        tariff.box_storage_coef_expr ?? '',
+        tariff.box_storage_liter ?? '',
+      ]),
+    ];
+
+    await this.googleSheetsService.updateSheet(dataForSheet);
   }
 }

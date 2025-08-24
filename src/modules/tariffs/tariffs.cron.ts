@@ -9,13 +9,12 @@ export class TariffsCron {
   private readonly logger = new Logger(TariffsCron.name);
   constructor(private readonly tariffsService: TariffsService) {}
 
-  @Cron(CronExpression.EVERY_MINUTE)
+  @Cron(CronExpression.EVERY_HOUR)
   async handleCron() {
     const today = new Date().toISOString().slice(0, 10);
-    this.logger.verbose(`Получение данных на ${today}...`);
+    this.logger.log(`Получение данных на ${today}...`);
     const tariffs: WarehouseTariffDto[] = await this.tariffsService.getTariffs(today);
     await this.tariffsService.saveTariffs(today, tariffs);
-    this.logger.verbose(tariffs);
-    this.logger.verbose('Данные были получены и сохранены');
+    this.logger.log('Данные были получены и сохранены');
   }
 }

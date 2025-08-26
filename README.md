@@ -18,7 +18,7 @@
     ```bash
     npm run migrate
     ```
-3.  Запусти приложение:
+3.  Запустить приложение:
     ```bash
     npm run start:dev
     ```

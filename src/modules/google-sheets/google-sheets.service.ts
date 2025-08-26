@@ -10,7 +10,7 @@ export class GoogleSheetsService {
     '..',
     '..',
     '..',
-    'wb-tariffs-service-470010-abcdd295e451.json',
+    'wb-tariffs-service-470010-1eda689b218f.json',
   );
   private readonly SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
   private readonly SPREADSHEET_ID = process.env.SPREADSHEET_ID;

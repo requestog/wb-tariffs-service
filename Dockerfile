@@ -23,7 +23,7 @@ RUN npm ci --omit=dev
 
 COPY --from=builder /app/dist ./dist
 
-COPY wb-tariffs-service-470010-abcdd295e451.json ./
+COPY wb-tariffs-service-470010-1eda689b218f.json ./
 
 
 ENV NODE_ENV=production

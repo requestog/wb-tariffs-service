@@ -9,7 +9,7 @@ export class TariffsCron {
   private readonly logger = new Logger(TariffsCron.name);
   constructor(private readonly tariffsService: TariffsService) {}
 
-  @Cron(CronExpression.EVERY_30_SECONDS)
+  @Cron(CronExpression.EVERY_HOUR)
   async handleCron() {
     const today = new Date().toISOString().slice(0, 10);
     this.logger.log(`Получение данных на ${today}...`);

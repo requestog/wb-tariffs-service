@@ -28,6 +28,6 @@
 ### 3\. Docker
 
 Запуск:
-    ```bash
+    ```
     docker-compose up --build
     ```

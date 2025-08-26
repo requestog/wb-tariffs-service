@@ -12,10 +12,10 @@ import Knex from 'knex';
         return Knex({
           client: 'pg',
           connection: {
-            host: config.get<string>('POSTGRES_HOST', 'localhost'),
-            user: config.get<string>('POSTGRES_USER'),
-            password: config.get<string>('POSTGRES_PASSWORD'),
-            database: config.get<string>('POSTGRES_DB'),
+            host: config.get<string>('DATABASE_HOST', 'postgres'),
+            user: config.get<string>('DATABASE_USER'),
+            password: config.get<string>('DATABASE_PASSWORD'),
+            database: config.get<string>('DATABASE_DB'),
           },
         });
       },

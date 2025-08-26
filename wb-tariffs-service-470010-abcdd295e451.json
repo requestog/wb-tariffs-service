@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "wb-tariffs-service-470010",
+  "private_key_id": "abcdd295e45137db10410625cdcf9b5cc0554382",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCv5sPy9ifevcbz\nxeyh3AbY4pKBmXIZV+4mpZ6kAIfM0AJ2aDda5aqUOtNkAD2tYoe4sIRrFMVFn4YZ\n6LBw/jaNmAKK2XkVUJ3l18j82pIFufMX/huAT24svt0eDW6QZd1FTaFsNbPWVLZz\nVK2aVqHmUxffDjTyOcik40QaEnCAbKYPrd+s5B5W33C1Rd1viczk5g8kUrzBbwmd\ncZDl4Lb0cZ7wfcErIQq2gV5OqAn5K7MV6swPo9Xujjbjlho2PwpEcoAdl7cu44qK\nMjH1pKcyHty6O/yKUHiBTcePS6Hue5lSg1Iqh7xRlX34jx1UPv6L1+j2ZeKPdHCe\njNnb4zBjAgMBAAECggEAVOukSw5Cxlq5i6PQr33RgnC0CURi3NBiJZ9MnOGyrhL4\nNWDv5H6/YOubdYpWPHg2jNgPPcEb0haHP8fiMtLP1IEALTd7qOowKLAKFOSSnZgd\nv8YKUeJHDuwgRSt35td+wUAOv/aXOVDRepF1dG8Bn3gbLLEnp491CgG8NZgUXzMH\n7mMT2sTKtg27/Jtx32Q2M893bq7soDPX8510HnhXiz9ppiKrBF/jy8R/tvaOQzcX\nkquGV74bQhzBrYoN3AT5NvV9ZQW6T3iDFIdC7siXsSixxSJjumDL6hh+LPp0xbqb\nLtyPigI9i9FWgjcT8MdbuYQCHa9dUNR1pgNKQUADoQKBgQDZUymrjTJA7MrEyUlk\n28pRzEap2cf5wJLTGBxOPunlFXUBgCmpGx8IxpGrSHpcvfJ58U6IPJqzc73m4sAB\nKYKUxl6SUGTNzCuq5u3T6U1Oms6Y0O2fZezEyZtIjAOl7N07lhIYdZKElSBjRdTz\nzyqP2t40KIjt65rMgQDzzZXBQwKBgQDPNHGC1v6eI4a+jZAiewM8QpcPUDor3iIb\nbY3NsPDbRKgQNAr081yjpEYJPV2xGcvN4nPK+xhrOsShbiNHuRQ863G9KVgOMdhX\nzJPlR4Dk8j0gUNKxEtPRmVw3zo7kqnhFCcJli05xRJBN2Zis+lrG3qTfnveKAlxV\nZZYn9DTSYQKBgAoNDZVQj21vRiV5xbozbBUCZJZAaz5CyMeYit6XjEu7BVFPcx3O\nEk5emKgaTwZxBoDbRy2H2APKq5K9E/I50D8/OWp861yVP8PEsGUnmhqzkDCDISpJ\nFX04ccUWLKkE3mp+E1IsRd155CiTNzkbcLV8guBYq5SNW/hvUvLzpCRvAoGAGK4I\nbysofLGClSPLbS/1vLG5yGsn4p28tkOgRkWzCors8bEhNPffquYgKW2TwUpvSgCV\nBjJOQEdpsEisDxjuXis1CvDnuhkZyatmWkLgCWUI/tZhohG6BRcdMtB5mKbtWFvH\nOc0T9M3T2lH2q3POaC2Qucn3dgq98LX+4pdly0ECgYAasvJ26sngxghRrYyiwyE0\n37L+/1qMn9w8uGCSxnlbfrdfMLTlOrV7aSbJVTk+CMNouJERhHhfNru2VZe72fEZ\nOgN4vPS2HqIt2utMzO66owbisT5suMuI5tpmpP2APgbx5PERbJjXDXI/HLVT6/K7\nek1WgQSilhVkwsANrGoN+g==\n-----END PRIVATE KEY-----\n",
+  "client_email": "tariffs@wb-tariffs-service-470010.iam.gserviceaccount.com",
+  "client_id": "116551203658198061372",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tariffs%40wb-tariffs-service-470010.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
